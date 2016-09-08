@@ -8,11 +8,11 @@
 
 The actual version is very simple and only meets my own requirements. However, I look forward about new features and contribution from the community (programmers and designers).
 
-The application uses some not very well-known APIs. If you want to register your application at startup or if you need to create a persistent file access due to the sandboxing of the AppStore, some code portions will help you to discover how to.
+The application uses some not very well-known APIs. If you want to register your application at startup or if you need to create a persistent file access due to the sandboxing of the AppStore, some code portions will help you to understand how to.
 
 ## Installation
 
-The simplest way to get the latest release of **ScreenToLayers** is to download the application throught the [Mac AppStore](https://itunes.apple.com/us/app/screentolayers/id1077317077?ls=1&amp;mt=8). The application is totally free and it is updated when major changes are made.
+The simplest way to get the latest release of **ScreenToLayers** is to download the application through the [Mac AppStore](https://itunes.apple.com/us/app/screentolayers/id1077317077?ls=1&amp;mt=8). The application is totally free and it is updated when major changes are made.
 
 ## Compilation
 
@@ -22,9 +22,9 @@ To compile, you only have to open `ScreenToLayers.xcodeproj` and run.
 
 ## Contribution
 
-If you have ideas or if you found bugs, I encourage you to open a pull issue.
+If you have ideas or if you found bugs, I encourage you to open a pull-issue.
 
-If you are a developer and/or a designer, you can also contribute to the project by submitting pull requests on the dev branch. The application was written in Objective-C to simplify the use of the low level API. I don't want to mix Objective-C and Swift for small project like this one. Please try to follow this rule and keep the actual guide style.
+If you are a developer and/or a designer, you can also contribute to the project by submitting pull-requests on the dev branch. The application was written in Objective-C to simplify the use of the low level API. I don't want to mix Objective-C and Swift for small project like this one. Please try to follow this rule and keep the actual guide style.
 
 ## About
 
