@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		266C61751C4EF2AE00CD99A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 266C61701C4EF2AE00CD99A0 /* AppDelegate.m */; };
+		266C61771C4EF2AE00CD99A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 266C61721C4EF2AE00CD99A0 /* main.m */; };
+		266C61781C4EF2AE00CD99A0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266C61731C4EF2AE00CD99A0 /* MainMenu.xib */; };
+		266C617C1C4EF2EC00CD99A0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 266C617B1C4EF2EC00CD99A0 /* Constants.m */; };
+		267DAFB51C4DDA79008C376F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267DAFB41C4DDA79008C376F /* ServiceManagement.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		266C616F1C4EF2AE00CD99A0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		266C61701C4EF2AE00CD99A0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		266C61711C4EF2AE00CD99A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		266C61721C4EF2AE00CD99A0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		266C61731C4EF2AE00CD99A0 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		266C61741C4EF2AE00CD99A0 /* ScreenToLayersHelper.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ScreenToLayersHelper.entitlements; sourceTree = "<group>"; };
+		266C617A1C4EF2EC00CD99A0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ScreenToLayers/Sources/Application/Constants.h; sourceTree = SOURCE_ROOT; };
+		266C617B1C4EF2EC00CD99A0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = ScreenToLayers/Sources/Application/Constants.m; sourceTree = SOURCE_ROOT; };
+		267DAF971C4DDA4B008C376F /* ScreenToLayersHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenToLayersHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267DAFB41C4DDA79008C376F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		267DAF941C4DDA4B008C376F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267DAFB51C4DDA79008C376F /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		267DAF8E1C4DDA4B008C376F = {
+			isa = PBXGroup;
+			children = (
+				267DAF991C4DDA4B008C376F /* ScreenToLayersHelper */,
+				267DAF981C4DDA4B008C376F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		267DAF981C4DDA4B008C376F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				267DAF971C4DDA4B008C376F /* ScreenToLayersHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		267DAF991C4DDA4B008C376F /* ScreenToLayersHelper */ = {
+			isa = PBXGroup;
+			children = (
+				266C61741C4EF2AE00CD99A0 /* ScreenToLayersHelper.entitlements */,
+				267DAFB41C4DDA79008C376F /* ServiceManagement.framework */,
+				266C617A1C4EF2EC00CD99A0 /* Constants.h */,
+				266C617B1C4EF2EC00CD99A0 /* Constants.m */,
+				266C616F1C4EF2AE00CD99A0 /* AppDelegate.h */,
+				266C61701C4EF2AE00CD99A0 /* AppDelegate.m */,
+				266C61711C4EF2AE00CD99A0 /* Info.plist */,
+				266C61721C4EF2AE00CD99A0 /* main.m */,
+				266C61731C4EF2AE00CD99A0 /* MainMenu.xib */,
+			);
+			path = ScreenToLayersHelper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		267DAF961C4DDA4B008C376F /* ScreenToLayersHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267DAFA81C4DDA4B008C376F /* Build configuration list for PBXNativeTarget "ScreenToLayersHelper" */;
+			buildPhases = (
+				267DAF931C4DDA4B008C376F /* Sources */,
+				267DAF941C4DDA4B008C376F /* Frameworks */,
+				267DAF951C4DDA4B008C376F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenToLayersHelper;
+			productName = ScreenToLayersHelper;
+			productReference = 267DAF971C4DDA4B008C376F /* ScreenToLayersHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		267DAF8F1C4DDA4B008C376F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jeremy Vizzini";
+				TargetAttributes = {
+					267DAF961C4DDA4B008C376F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JVTX6KC453;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 267DAF921C4DDA4B008C376F /* Build configuration list for PBXProject "ScreenToLayersHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 267DAF8E1C4DDA4B008C376F;
+			productRefGroup = 267DAF981C4DDA4B008C376F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				267DAF961C4DDA4B008C376F /* ScreenToLayersHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		267DAF951C4DDA4B008C376F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266C61781C4EF2AE00CD99A0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267DAF931C4DDA4B008C376F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				266C61771C4EF2AE00CD99A0 /* main.m in Sources */,
+				266C61751C4EF2AE00CD99A0 /* AppDelegate.m in Sources */,
+				266C617C1C4EF2EC00CD99A0 /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		267DAFA61C4DDA4B008C376F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		267DAFA71C4DDA4B008C376F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		267DAFA91C4DDA4B008C376F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenToLayersHelper/ScreenToLayersHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenToLayersHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.screentolayers.osx.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		267DAFAA1C4DDA4B008C376F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ScreenToLayersHelper/ScreenToLayersHelper.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				INFOPLIST_FILE = ScreenToLayersHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.screentolayers.osx.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267DAF921C4DDA4B008C376F /* Build configuration list for PBXProject "ScreenToLayersHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267DAFA61C4DDA4B008C376F /* Debug */,
+				267DAFA71C4DDA4B008C376F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267DAFA81C4DDA4B008C376F /* Build configuration list for PBXNativeTarget "ScreenToLayersHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267DAFA91C4DDA4B008C376F /* Debug */,
+				267DAFAA1C4DDA4B008C376F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 267DAF8F1C4DDA4B008C376F /* Project object */;
+}

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ListController">
+            <connections>
+                <outlet property="arrayController" destination="JDS-yD-fJV" id="7UH-SM-cCI"/>
+                <outlet property="imageFramingEffects" destination="0TG-Rh-mD2" id="Ve6-rb-2Mb"/>
+                <outlet property="imageOpaqueImage" destination="5R4-aA-AIg" id="M1k-ub-llZ"/>
+                <outlet property="imageShadowsOnly" destination="nBq-Ai-bFb" id="gGT-83-3CI"/>
+                <outlet property="imageTightFit" destination="a0m-be-aR1" id="ENB-Lj-BfL"/>
+                <outlet property="listDesktopWindows" destination="k6x-22-kbO" id="fgO-zL-9r0"/>
+                <outlet property="listOffscreenWindows" destination="TOI-5n-Apt" id="rdv-1H-L6j"/>
+                <outlet property="outputView" destination="77r-ai-3qb" id="2ns-hD-53W"/>
+                <outlet property="singleWindow" destination="JJt-3Y-MCR" id="q7Y-JI-9d1"/>
+                <outlet property="window" destination="kKu-39-LFB" id="l1e-E8-h7U"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <arrayController objectClassName="NSDictionary" editable="NO" avoidsEmptySelection="NO" id="JDS-yD-fJV">
+            <declaredKeys>
+                <string>applicationName</string>
+                <string>windowBounds</string>
+                <string>windowID</string>
+                <string>windowLevel</string>
+                <string>windowOrigin</string>
+                <string>windowSize</string>
+            </declaredKeys>
+        </arrayController>
+        <window title="Windows List" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="kKu-39-LFB">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="261" y="217" width="900" height="580"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="900" height="580"/>
+            <view key="contentView" id="Xiz-dd-rGR">
+                <rect key="frame" x="0.0" y="0.0" width="900" height="580"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button toolTip="Controls if offscreen windows are included or not." tag="100" id="TOI-5n-Apt">
+                        <rect key="frame" x="30" y="383" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Offscreen Windows" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ejT-uh-bCp">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleOffscreenWindows:" target="-2" id="JVZ-HK-Nap"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Controls if desktop elements (desktop icons and picture) are included or not." tag="101" id="k6x-22-kbO">
+                        <rect key="frame" x="30" y="363" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Desktop Elements" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="qDs-mf-qyt">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleDesktopWindows:" target="-2" id="xfF-GS-wCO"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="tYM-SW-qLV">
+                        <rect key="frame" x="17" y="407" width="84" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="List Options:" id="F17-KP-dBw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" id="CfK-Uc-LHh">
+                        <rect key="frame" x="17" y="329" width="101" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Image Options:" id="qUI-q8-ZMz">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button toolTip="Ignore window framing effects (such as shadows) when creating the image" tag="110" id="0TG-Rh-mD2">
+                        <rect key="frame" x="30" y="305" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Ignore Framing Effects" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Tyf-f3-OpG">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleFramingEffects:" target="-2" id="foh-Md-ZAS"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Create an opaque image composited over a white background." tag="111" id="5R4-aA-AIg">
+                        <rect key="frame" x="30" y="285" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Create Opaque Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="e9W-8f-p6U">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleOpaqueImage:" target="-2" id="uHw-Bj-6Gf"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Only draw the shadows, not the window contents themselves." tag="112" id="nBq-Ai-bFb">
+                        <rect key="frame" x="30" y="265" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Only include shadows" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Hkc-Mf-hfP">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleShadowsOnly:" target="-2" id="gdc-ev-Kfp"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="ukc-YP-jzC">
+                        <rect key="frame" x="17" y="210" width="153" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Single Window Options:" id="17B-Vh-N1E">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button toolTip="Controls if the image created is fit tightly to the windows selected, or if the image should be size of the desktop." tag="113" id="a0m-be-aR1">
+                        <rect key="frame" x="30" y="245" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Fit image tightly" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="gNU-AE-RCp">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleTightFit:" target="-2" id="XQr-fg-fpx"/>
+                        </connections>
+                    </button>
+                    <matrix verticalHuggingPriority="750" tag="120" allowsEmptySelection="NO" id="JJt-3Y-MCR">
+                        <rect key="frame" x="32" y="104" width="174" height="98"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="174" height="18"/>
+                        <size key="intercellSpacing" width="4" height="2"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="D3E-vn-v2p">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="Only windows above" imagePosition="left" alignment="left" toolTip="When a single window is specified, capture only those windows ordered above it." tag="1" inset="2" id="AFc-gv-qNy">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Selected and above" imagePosition="left" alignment="left" toolTip="When a single window is specified, capture the selected window and those windows ordered above it." tag="2" inset="2" id="upi-zW-z7h">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Selected only" imagePosition="left" alignment="left" state="on" toolTip="Capture only the selected window" tag="3" inset="2" id="3HY-WU-NgM">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Selected and below" imagePosition="left" alignment="left" toolTip="When a single window is specified, capture the selected window and those windows ordered below it." tag="4" inset="2" id="I8b-me-xGz">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Only windows below" imagePosition="left" alignment="left" toolTip="When a single window is specified, capture only those windows ordered below it." tag="5" inset="2" id="fS5-xC-ag5">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                        <connections>
+                            <action selector="updateSingleWindowOption:" target="-2" id="nlc-2m-bcp"/>
+                        </connections>
+                    </matrix>
+                    <imageView id="77r-ai-3qb">
+                        <rect key="frame" x="17" y="444" width="192" height="119"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="YGc-R4-1Ng"/>
+                    </imageView>
+                    <button toolTip="Grab a screenshot of all windows visible onscreen." verticalHuggingPriority="750" id="AXs-dI-pFV">
+                        <rect key="frame" x="19" y="18" width="186" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundRect" title="Export Selection" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MKQ-MB-7cg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="exportImage:" target="-2" id="di7-yM-var"/>
+                        </connections>
+                    </button>
+                    <scrollView focusRingType="none" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="xXD-3Z-jJV">
+                        <rect key="frame" x="226" y="-2" width="675" height="584"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" focusRingType="none" id="1yX-eo-Tl6">
+                            <rect key="frame" x="1" y="0.0" width="673" height="583"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnSelection="YES" autosaveColumns="NO" headerView="tVs-xG-CQo" id="EXj-7E-cM5">
+                                    <rect key="frame" x="0.0" y="0.0" width="673" height="560"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn editable="NO" width="231.5" minWidth="180" maxWidth="3000" headerToolTip="" id="NZP-B5-dS5">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Application">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="cuk-hT-wAx">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="JDS-yD-fJV" name="value" keyPath="arrangedObjects.applicationName" id="ydX-Fp-afF"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="75" minWidth="75" maxWidth="75" id="a3m-O8-tV6">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Origin">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="wWU-Af-pBq">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="JDS-yD-fJV" name="value" keyPath="arrangedObjects.windowOrigin" id="1B7-t7-56F"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="75" minWidth="75" maxWidth="75" id="p4m-Oe-CDS">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Size">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="rCK-Y1-cIf">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="JDS-yD-fJV" name="value" keyPath="arrangedObjects.windowSize" id="kiZ-Qu-hAW"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="75" minWidth="75" maxWidth="75" id="XkC-6z-NEP">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Window ID">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="center" title="Text Cell" id="N3a-gJ-lgH">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="JDS-yD-fJV" name="value" keyPath="arrangedObjects.windowID" id="xtE-6C-ImF"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="201.5" minWidth="150" maxWidth="250" headerToolTip="" id="Oz2-CM-E6A">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Window Level">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="tCw-rG-5ej">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="JDS-yD-fJV" name="value" keyPath="arrangedObjects.windowLevel" id="Ldj-iL-VmQ"/>
+                                            </connections>
+                                        </tableColumn>
+                                    </tableColumns>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="rCr-bX-tO6">
+                            <rect key="frame" x="1" y="567" width="673" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="5qa-6P-qSF">
+                            <rect key="frame" x="658" y="23" width="16" height="560"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="tVs-xG-CQo">
+                            <rect key="frame" x="0.0" y="0.0" width="673" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
+                    <button toolTip="Grab a screenshot of all windows visible onscreen." verticalHuggingPriority="750" id="1aO-d5-AOk">
+                        <rect key="frame" x="19" y="44" width="186" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundRect" title="Grab Screenshot" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KKc-5e-PvS">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="grabScreenShot:" target="-2" id="nAH-Fo-1gS"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Grab a screenshot of all windows visible onscreen." verticalHuggingPriority="750" id="v97-2D-FuI">
+                        <rect key="frame" x="19" y="70" width="186" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundRect" title="Refresh Windows" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="S7r-B0-liQ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="cellTitle"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="refreshWindowList:" target="-2" id="GdJ-cH-5vg"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="initialFirstResponder" destination="EXj-7E-cM5" id="xXG-QL-vtx"/>
+            </connections>
+            <point key="canvasLocation" x="348" y="896"/>
+        </window>
+    </objects>
+</document>

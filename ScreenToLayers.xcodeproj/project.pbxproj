@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		265E64821C4C3391004962BB /* ScreenToLayersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64811C4C3391004962BB /* ScreenToLayersTests.m */; };
+		265E64C11C4C4814004962BB /* ListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265E64AA1C4C4814004962BB /* ListWindow.xib */; };
+		265E64C21C4C4814004962BB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265E64AC1C4C4814004962BB /* MainMenu.xib */; };
+		265E64C31C4C4814004962BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265E64AF1C4C4814004962BB /* Assets.xcassets */; };
+		265E64D41C4C4A0A004962BB /* NSDataPSDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64CE1C4C4A0A004962BB /* NSDataPSDAdditions.m */; };
+		265E64D51C4C4A0A004962BB /* PSDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64D01C4C4A0A004962BB /* PSDLayer.m */; };
+		265E64D61C4C4A0A004962BB /* PSDWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64D31C4C4A0A004962BB /* PSDWriter.m */; };
+		265E64FC1C4D953C004962BB /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64F51C4D953C004962BB /* AppController.m */; };
+		265E64FD1C4D953C004962BB /* ListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64F71C4D953C004962BB /* ListController.m */; };
+		265E64FF1C4D953C004962BB /* ScreenGraber.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E64FB1C4D953C004962BB /* ScreenGraber.m */; };
+		265E65021C4DAAB9004962BB /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 265E65011C4DAAB9004962BB /* Preferences.m */; };
+		265E65051C4DAB48004962BB /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265E65031C4DAB48004962BB /* Preferences.xib */; };
+		266C616E1C4EF21300CD99A0 /* ScreenToLayersHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 266C616D1C4EF20400CD99A0 /* ScreenToLayersHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		266E197F1D7EFBF500A90618 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E197E1D7EFBF500A90618 /* Presentation.m */; };
+		266E19891D7F014E00A90618 /* Presentation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266E19871D7F014E00A90618 /* Presentation.xib */; };
+		266E198C1D7F058300A90618 /* WhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 266E198B1D7F058300A90618 /* WhiteView.m */; };
+		267DAFB81C4DDC30008C376F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267DAFB71C4DDC30008C376F /* ServiceManagement.framework */; };
+		268E69661C4EA09E006F853B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E69651C4EA09E006F853B /* Constants.m */; };
+		269658B91C62351A00709223 /* CaptureEndSound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 269658A61C62351A00709223 /* CaptureEndSound.aiff */; };
+		269658BB1C62351A00709223 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 269658A91C62351A00709223 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		265E647E1C4C3391004962BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 265E64621C4C3391004962BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 265E64691C4C3391004962BB;
+			remoteInfo = ScreenToLayers;
+		};
+		266C616C1C4EF20400CD99A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 266C61681C4EF20400CD99A0 /* ScreenToLayersHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 267DAF971C4DDA4B008C376F;
+			remoteInfo = ScreenToLayersHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		267DAF8B1C4DD9DB008C376F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				266C616E1C4EF21300CD99A0 /* ScreenToLayersHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		265E646A1C4C3391004962BB /* ScreenToLayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenToLayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		265E647D1C4C3391004962BB /* ScreenToLayersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenToLayersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		265E64811C4C3391004962BB /* ScreenToLayersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenToLayersTests.m; sourceTree = "<group>"; };
+		265E64831C4C3391004962BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		265E64AB1C4C4814004962BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ListWindow.xib; sourceTree = "<group>"; };
+		265E64AD1C4C4814004962BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		265E64AF1C4C4814004962BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		265E64CB1C4C484D004962BB /* ScreenToLayers.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ScreenToLayers.entitlements; sourceTree = "<group>"; };
+		265E64CD1C4C4A0A004962BB /* NSDataPSDAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataPSDAdditions.h; sourceTree = "<group>"; };
+		265E64CE1C4C4A0A004962BB /* NSDataPSDAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataPSDAdditions.m; sourceTree = "<group>"; };
+		265E64CF1C4C4A0A004962BB /* PSDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDLayer.h; sourceTree = "<group>"; };
+		265E64D01C4C4A0A004962BB /* PSDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDLayer.m; sourceTree = "<group>"; };
+		265E64D21C4C4A0A004962BB /* PSDWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDWriter.h; sourceTree = "<group>"; };
+		265E64D31C4C4A0A004962BB /* PSDWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDWriter.m; sourceTree = "<group>"; };
+		265E64F41C4D953C004962BB /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		265E64F51C4D953C004962BB /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		265E64F61C4D953C004962BB /* ListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListController.h; sourceTree = "<group>"; };
+		265E64F71C4D953C004962BB /* ListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListController.m; sourceTree = "<group>"; };
+		265E64FA1C4D953C004962BB /* ScreenGraber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenGraber.h; sourceTree = "<group>"; };
+		265E64FB1C4D953C004962BB /* ScreenGraber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenGraber.m; sourceTree = "<group>"; };
+		265E65001C4DAAB9004962BB /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		265E65011C4DAAB9004962BB /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		265E65041C4DAB48004962BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Preferences.xib; sourceTree = "<group>"; };
+		266C61681C4EF20400CD99A0 /* ScreenToLayersHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ScreenToLayersHelper.xcodeproj; sourceTree = SOURCE_ROOT; };
+		266E197D1D7EFBF500A90618 /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
+		266E197E1D7EFBF500A90618 /* Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presentation.m; sourceTree = "<group>"; };
+		266E19881D7F014E00A90618 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Presentation.xib; sourceTree = "<group>"; };
+		266E198A1D7F058300A90618 /* WhiteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteView.h; sourceTree = "<group>"; };
+		266E198B1D7F058300A90618 /* WhiteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteView.m; sourceTree = "<group>"; };
+		267DAFB71C4DDC30008C376F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		268E69641C4EA09E006F853B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		268E69651C4EA09E006F853B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		269658A61C62351A00709223 /* CaptureEndSound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = CaptureEndSound.aiff; sourceTree = "<group>"; };
+		269658A81C62351A00709223 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		269658A91C62351A00709223 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		265E64671C4C3391004962BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267DAFB81C4DDC30008C376F /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265E647A1C4C3391004962BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		265E64611C4C3391004962BB = {
+			isa = PBXGroup;
+			children = (
+				265E646C1C4C3391004962BB /* ScreenToLayers */,
+				265E64801C4C3391004962BB /* ScreenToLayersTests */,
+				265E646B1C4C3391004962BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		265E646B1C4C3391004962BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				265E646A1C4C3391004962BB /* ScreenToLayers.app */,
+				265E647D1C4C3391004962BB /* ScreenToLayersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		265E646C1C4C3391004962BB /* ScreenToLayers */ = {
+			isa = PBXGroup;
+			children = (
+				265E64CB1C4C484D004962BB /* ScreenToLayers.entitlements */,
+				265E64B21C4C4814004962BB /* Sources */,
+				265E64A91C4C4814004962BB /* Interfaces */,
+				265E64AE1C4C4814004962BB /* Resources */,
+				268E69681C4EABA9006F853B /* Frameworks */,
+			);
+			path = ScreenToLayers;
+			sourceTree = "<group>";
+		};
+		265E64801C4C3391004962BB /* ScreenToLayersTests */ = {
+			isa = PBXGroup;
+			children = (
+				265E64811C4C3391004962BB /* ScreenToLayersTests.m */,
+				265E64831C4C3391004962BB /* Info.plist */,
+			);
+			path = ScreenToLayersTests;
+			sourceTree = "<group>";
+		};
+		265E64A91C4C4814004962BB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				265E64AC1C4C4814004962BB /* MainMenu.xib */,
+				265E64AA1C4C4814004962BB /* ListWindow.xib */,
+				265E65031C4DAB48004962BB /* Preferences.xib */,
+				266E19871D7F014E00A90618 /* Presentation.xib */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		265E64AE1C4C4814004962BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				265E64AF1C4C4814004962BB /* Assets.xcassets */,
+				269658A51C62351A00709223 /* Sounds */,
+				269658A71C62351A00709223 /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		265E64B21C4C4814004962BB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				265E64F31C4D953C004962BB /* Application */,
+				265E64CC1C4C4A0A004962BB /* PSD writer */,
+				266E197A1D7EF5F600A90618 /* Helper */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		265E64CC1C4C4A0A004962BB /* PSD writer */ = {
+			isa = PBXGroup;
+			children = (
+				265E64D21C4C4A0A004962BB /* PSDWriter.h */,
+				265E64D31C4C4A0A004962BB /* PSDWriter.m */,
+				265E64CF1C4C4A0A004962BB /* PSDLayer.h */,
+				265E64D01C4C4A0A004962BB /* PSDLayer.m */,
+				265E64CD1C4C4A0A004962BB /* NSDataPSDAdditions.h */,
+				265E64CE1C4C4A0A004962BB /* NSDataPSDAdditions.m */,
+			);
+			path = "PSD writer";
+			sourceTree = "<group>";
+		};
+		265E64F31C4D953C004962BB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				268E69641C4EA09E006F853B /* Constants.h */,
+				268E69651C4EA09E006F853B /* Constants.m */,
+				265E64F41C4D953C004962BB /* AppController.h */,
+				265E64F51C4D953C004962BB /* AppController.m */,
+				265E64F61C4D953C004962BB /* ListController.h */,
+				265E64F71C4D953C004962BB /* ListController.m */,
+				265E64FA1C4D953C004962BB /* ScreenGraber.h */,
+				265E64FB1C4D953C004962BB /* ScreenGraber.m */,
+				265E65001C4DAAB9004962BB /* Preferences.h */,
+				265E65011C4DAAB9004962BB /* Preferences.m */,
+				266E197D1D7EFBF500A90618 /* Presentation.h */,
+				266E197E1D7EFBF500A90618 /* Presentation.m */,
+				266E198A1D7F058300A90618 /* WhiteView.h */,
+				266E198B1D7F058300A90618 /* WhiteView.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		266C61691C4EF20400CD99A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				266C616D1C4EF20400CD99A0 /* ScreenToLayersHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		266E197A1D7EF5F600A90618 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				266C61681C4EF20400CD99A0 /* ScreenToLayersHelper.xcodeproj */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		268E69681C4EABA9006F853B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				267DAFB71C4DDC30008C376F /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		269658A51C62351A00709223 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				269658A61C62351A00709223 /* CaptureEndSound.aiff */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		269658A71C62351A00709223 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				269658A81C62351A00709223 /* Info.plist */,
+				269658A91C62351A00709223 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		265E64691C4C3391004962BB /* ScreenToLayers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265E64861C4C3391004962BB /* Build configuration list for PBXNativeTarget "ScreenToLayers" */;
+			buildPhases = (
+				265E64661C4C3391004962BB /* Sources */,
+				265E64671C4C3391004962BB /* Frameworks */,
+				265E64681C4C3391004962BB /* Resources */,
+				267DAF8B1C4DD9DB008C376F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenToLayers;
+			productName = ScreenToLayers;
+			productReference = 265E646A1C4C3391004962BB /* ScreenToLayers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		265E647C1C4C3391004962BB /* ScreenToLayersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 265E64891C4C3391004962BB /* Build configuration list for PBXNativeTarget "ScreenToLayersTests" */;
+			buildPhases = (
+				265E64791C4C3391004962BB /* Sources */,
+				265E647A1C4C3391004962BB /* Frameworks */,
+				265E647B1C4C3391004962BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				265E647F1C4C3391004962BB /* PBXTargetDependency */,
+			);
+			name = ScreenToLayersTests;
+			productName = ScreenToLayersTests;
+			productReference = 265E647D1C4C3391004962BB /* ScreenToLayersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		265E64621C4C3391004962BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jeremy Vizzini";
+				TargetAttributes = {
+					265E64691C4C3391004962BB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JVTX6KC453;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					265E647C1C4C3391004962BB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 265E64691C4C3391004962BB;
+					};
+				};
+			};
+			buildConfigurationList = 265E64651C4C3391004962BB /* Build configuration list for PBXProject "ScreenToLayers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 265E64611C4C3391004962BB;
+			productRefGroup = 265E646B1C4C3391004962BB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 266C61691C4EF20400CD99A0 /* Products */;
+					ProjectRef = 266C61681C4EF20400CD99A0 /* ScreenToLayersHelper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				265E64691C4C3391004962BB /* ScreenToLayers */,
+				265E647C1C4C3391004962BB /* ScreenToLayersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		266C616D1C4EF20400CD99A0 /* ScreenToLayersHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ScreenToLayersHelper.app;
+			remoteRef = 266C616C1C4EF20400CD99A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		265E64681C4C3391004962BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				269658B91C62351A00709223 /* CaptureEndSound.aiff in Resources */,
+				265E64C11C4C4814004962BB /* ListWindow.xib in Resources */,
+				265E64C31C4C4814004962BB /* Assets.xcassets in Resources */,
+				266E19891D7F014E00A90618 /* Presentation.xib in Resources */,
+				265E65051C4DAB48004962BB /* Preferences.xib in Resources */,
+				265E64C21C4C4814004962BB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265E647B1C4C3391004962BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		265E64661C4C3391004962BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				269658BB1C62351A00709223 /* main.m in Sources */,
+				265E64D61C4C4A0A004962BB /* PSDWriter.m in Sources */,
+				265E64D41C4C4A0A004962BB /* NSDataPSDAdditions.m in Sources */,
+				265E64D51C4C4A0A004962BB /* PSDLayer.m in Sources */,
+				265E64FD1C4D953C004962BB /* ListController.m in Sources */,
+				265E64FF1C4D953C004962BB /* ScreenGraber.m in Sources */,
+				266E197F1D7EFBF500A90618 /* Presentation.m in Sources */,
+				265E64FC1C4D953C004962BB /* AppController.m in Sources */,
+				265E65021C4DAAB9004962BB /* Preferences.m in Sources */,
+				268E69661C4EA09E006F853B /* Constants.m in Sources */,
+				266E198C1D7F058300A90618 /* WhiteView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265E64791C4C3391004962BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265E64821C4C3391004962BB /* ScreenToLayersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		265E647F1C4C3391004962BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 265E64691C4C3391004962BB /* ScreenToLayers */;
+			targetProxy = 265E647E1C4C3391004962BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		265E64AA1C4C4814004962BB /* ListWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				265E64AB1C4C4814004962BB /* Base */,
+			);
+			name = ListWindow.xib;
+			sourceTree = "<group>";
+		};
+		265E64AC1C4C4814004962BB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				265E64AD1C4C4814004962BB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		265E65031C4DAB48004962BB /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				265E65041C4DAB48004962BB /* Base */,
+			);
+			name = Preferences.xib;
+			sourceTree = "<group>";
+		};
+		266E19871D7F014E00A90618 /* Presentation.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				266E19881D7F014E00A90618 /* Base */,
+			);
+			name = Presentation.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		265E64841C4C3391004962BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		265E64851C4C3391004962BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		265E64871C4C3391004962BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScreenToLayers/ScreenToLayers.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ScreenToLayers/Resources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.screentolayers.osx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		265E64881C4C3391004962BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScreenToLayers/ScreenToLayers.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ScreenToLayers/Resources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.screentolayers.osx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		265E648A1C4C3391004962BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenToLayersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.ScreenToLayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenToLayers.app/Contents/MacOS/ScreenToLayers";
+			};
+			name = Debug;
+		};
+		265E648B1C4C3391004962BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ScreenToLayersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeremyvizzini.ScreenToLayersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenToLayers.app/Contents/MacOS/ScreenToLayers";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		265E64651C4C3391004962BB /* Build configuration list for PBXProject "ScreenToLayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265E64841C4C3391004962BB /* Debug */,
+				265E64851C4C3391004962BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265E64861C4C3391004962BB /* Build configuration list for PBXNativeTarget "ScreenToLayers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265E64871C4C3391004962BB /* Debug */,
+				265E64881C4C3391004962BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		265E64891C4C3391004962BB /* Build configuration list for PBXNativeTarget "ScreenToLayersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				265E648A1C4C3391004962BB /* Debug */,
+				265E648B1C4C3391004962BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 265E64621C4C3391004962BB /* Project object */;
+}

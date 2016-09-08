@@ -1,0 +1,903 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+	min-width: 480px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td,
+th {
+	padding: 0;
+}
+@font-face {
+	font-family: 'Lato';
+	src: url("../fonts/lato-black/lato-black-c938aee2a794e1ce6b048340d98d5b951c23ee91c9e6d466bdd53128d8755af4.eot");
+	src: local('Lato Black'),
+			 local('Lato-Black'), 
+			 url("../fonts/lato-black/lato-black-c938aee2a794e1ce6b048340d98d5b951c23ee91c9e6d466bdd53128d8755af4-.eot#iefix") 
+			 format('embedded-opentype'), 
+			 url("../fonts/lato-black/lato-black-ff00636ea86b2c0d42f9b810b4f8304468ede38a3bd1bb14ac85086c879123f5.woff2") 
+			 format('woff2'), 
+			 url("../fonts/lato-black/lato-black-0fdcfb7bc888d2aff696dda853bc4ddc8d0cdf8655f7cab2f0263bbe189e160d.woff") 
+			 format('woff'), 
+			 url("../fonts/lato-black/lato-black-62398f940a9564361022ba6d5fbbaad7cb600b3d7ef13a259a7bc4c859dd4f44.ttf") 
+			 format('truetype'), 
+			 url("../fonts/lato-black/lato-black-b9d6daf4817c613cfaeaeffc594696f366eca04e299a18d7bc5ef7ac5bb250c4.svg#lato") 
+			 format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-blackitalic/lato-blackitalic-c03412495d80d9af7969ebc02fe79dfc492ec37536f0c544702d079a093b4c91.eot");
+  src: local('Lato Black Italic'),
+       local('Lato-BlackItalic'),
+			 url("../fonts/lato-blackitalic/lato-blackitalic-c03412495d80d9af7969ebc02fe79dfc492ec37536f0c544702d079a093b4c91-.eot#iefix") 
+			 format('embedded-opentype'), 
+			 url("../fonts/lato-blackitalic/lato-blackitalic-b91fc91ef31bcedf97c528d7ecc3b2cfc9a3f6201017827647641a5fdcf15332.woff2")
+			 format('woff2'), url("../fonts/lato-blackitalic/lato-blackitalic-5c30baab619437ce5d1db90496ba62e511194b0247aaa0d9d4eb1c7eff9e9cb9.woff")
+			 format('woff'), url("../fonts/lato-blackitalic/lato-blackitalic-be00fa70983ec52b18b98e1b9f172432ee941c62ceddd06e945a71f8f30b38f7.ttf")
+			 format('truetype'), url("../fonts/lato-blackitalic/lato-blackitalic-a325dc2f6a88577f0c28ea52529b3cb5fc93392b573ed3d34195b5c0e8ffbfcf.svg#lato") 
+			 format('svg');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-heavy/lato-heavy-ec5bf34682457a2fff0469c7b8bc864bec16678b058c8c4e8dafae6c1cadd7a7.eot");
+  src: local('Lato Heavy'), local('Lato-Heavy'), url("../fonts/lato-heavy/lato-heavy-ec5bf34682457a2fff0469c7b8bc864bec16678b058c8c4e8dafae6c1cadd7a7-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-heavy/lato-heavy-26e51949df663e17fe24e240368aa46e6a269cf07ce45cbfee2bf6d10efa712b.woff2") format('woff2'), url("../fonts/lato-heavy/lato-heavy-b61b8c1f4ecea7b5b6a80c0e2db37c306e8c3afc280e6bf3fff8fb3f36f225aa.woff") format('woff'), url("../fonts/lato-heavy/lato-heavy-3f519229220cb477506e28c855bef4bc0eca6978807c6da90745601e30e2a7ba.ttf") format('truetype'), url("../fonts/lato-heavy/lato-heavy-8e740b41353f909f7611131ca23a91b0ae951f01f3d625b3f7b16ea1ade2a9f9.svg#lato") format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-heavyitalic/lato-heavyitalic-1a9978e061e650f61d65d3b1890d0a470bf05f01efddb2992d951c783b6b48f5.eot");
+  src: local('Lato Heavy Italic'), local('Lato-HeavyItalic'), url("../fonts/lato-heavyitalic/lato-heavyitalic-1a9978e061e650f61d65d3b1890d0a470bf05f01efddb2992d951c783b6b48f5-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-heavyitalic/lato-heavyitalic-1e9c13e0236e0509dd5e7f53eb8f0588a8a6ce56de853263412a7fb3926394cf.woff2") format('woff2'), url("../fonts/lato-heavyitalic/lato-heavyitalic-303ad9fdca6b278c230dac7bc076a8fa28b69c95249a6c62c48b73fa2da9a404.woff") format('woff'), url("../fonts/lato-heavyitalic/lato-heavyitalic-910a7d953f7f85ab9baf9a24ed474a1b232b601dda7e698e5189e77fb531fa25.ttf") format('truetype'), url("../fonts/lato-heavyitalic/lato-heavyitalic-bde5dac99fac2801ff7e82e94932592a96acb72098ecf2d1dfdd0fe6a37980ff.svg#lato") format('svg');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-bold/lato-bold-51ae36dcfb7132b4fcab34278ae4212721da7165dfe1cddc3e04262dd37b0c2d.eot");
+  src: local('Lato Bold'), local('Lato-Bold'), url("../fonts/lato-bold/lato-bold-51ae36dcfb7132b4fcab34278ae4212721da7165dfe1cddc3e04262dd37b0c2d-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-bold/lato-bold-2db60403ee96a301b6290c255ef74653fe8dc2b4251ee66ed4e939cd05dbc84e.woff2") format('woff2'), url("../fonts/lato-bold/lato-bold-4c04f7890211bca9a31919ee49e1250835ab842c3a0a6321ce7af1e3b38beee2.woff") format('woff'), url("../fonts/lato-bold/lato-bold-4013e068df10593a69fae75d89a24b170951500db393cf66f89dd2eff4325bad.ttf") format('truetype'), url("../fonts/lato-bold/lato-bold-40de0826765a36cf9b52567582ea9bcaabf0ee6fa41e29e0b19da7c87663152d.svg#lato") format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-bolditalic/lato-bolditalic-2d34e72fd82cd4d67aae0718cf437404af3f372efec0a557f1115d4f861a340e.eot");
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url("../fonts/lato-bolditalic/lato-bolditalic-2d34e72fd82cd4d67aae0718cf437404af3f372efec0a557f1115d4f861a340e-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-bolditalic/lato-bolditalic-7c82caec73fedc2f2a2ac7b555a18d996a3c002e4c8bf4ad98f5eabcc00911a6.woff2") format('woff2'), url("../fonts/lato-bolditalic/lato-bolditalic-70f233b8c3d0ca4baa08edb05d0aad645ebd8785f3b9008a7ddb0cdbc0999355.woff") format('woff'), url("../fonts/lato-bolditalic/lato-bolditalic-cbe6e3a67d25024006b81fc63c7c6f939cd6e8b6710abe1b7f57a71f8fb0d2cd.ttf") format('truetype'), url("../fonts/lato-bolditalic/lato-bolditalic-43f0b7fb26b7aa057838431c48b21ac94aef1273ff444e8be594ebc7df8b70bf.svg#lato") format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-semibold/lato-semibold-3fb9f1890c36389617c91af135fd5961dd496dfb2862885aebc48d1f4c04ddb3.eot");
+  src: local('Lato Semi Bold'), local('Lato-SemiBold'), url("../fonts/lato-semibold/lato-semibold-3fb9f1890c36389617c91af135fd5961dd496dfb2862885aebc48d1f4c04ddb3-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-semibold/lato-semibold-f8f3aac8450bf098f51c3592ac8183464224256f8e46d3859c6a76cc11d59474.woff2") format('woff2'), url("../fonts/lato-semibold/lato-semibold-15f0dbfdc7e0142e35e0cfad279b9162494ebe5d2d2f0dcd19b079c4e4a48682.woff") format('woff'), url("../fonts/lato-semibold/lato-semibold-7fe01f8fb9483d0cb5c8906d05a67b9e507e103bae774432ca46969eea5c232b.ttf") format('truetype'), url("../fonts/lato-semibold/lato-semibold-4c234cd6a67e6daa59cf45272e0c8b90a7b58945157de68f8dd34ef09ae49b4e.svg#lato") format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-semibolditalic/lato-semibolditalic-769c1c6ea52389fdeecdb34b2bac4d7a88f1f87fcd616b5c1d4659a783bd8c49.eot");
+  src: local('Lato Semi Bold Italic'), local('Lato-SemiBold Italic'), url("../fonts/lato-semibolditalic/lato-semibolditalic-769c1c6ea52389fdeecdb34b2bac4d7a88f1f87fcd616b5c1d4659a783bd8c49-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-semibolditalic/lato-semibolditalic-bd09c611a72e6a286889bf430371e34bd7492e9e219366d55f977aea27beb549.woff2") format('woff2'), url("../fonts/lato-semibolditalic/lato-semibolditalic-6acaf70fafb34a047b79a7e8f74d4dc73aba0f535de13001e6fc774cbda44df4.woff") format('woff'), url("../fonts/lato-semibolditalic/lato-semibolditalic-d71659bee75208d433fb0739196567820055dfdde8464fedd54072c074dffa9a.ttf") format('truetype'), url("../fonts/lato-semibolditalic/lato-semibolditalic-e69f2b727bec0eb1a9f2f26e5c0e7bdf2968854afc0368c6200a0ed0b199c28a.svg#lato") format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-medium/lato-medium-dfbd04b52f013fd274133ac007e2e3c005ce51c0d26c3602021e31d26a80fed7.eot");
+  src: local('Lato Medium'), local('Lato-Medium'), url("../fonts/lato-medium/lato-medium-dfbd04b52f013fd274133ac007e2e3c005ce51c0d26c3602021e31d26a80fed7-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-medium/lato-medium-c199213882b79fe118e73b1f490b534a2be2eb6485bccfd8137b934a1cc66cbd.woff2") format('woff2'), url("../fonts/lato-medium/lato-medium-83f6d6134d3121d9ac20cadff1b79dfbfe7593d78edaaa1bd2c0014e4d6bb51f.woff") format('woff'), url("../fonts/lato-medium/lato-medium-af767dc73c5b662830c2ac04403a801bfb1ac58c61a54879e0cf7bfdf7204648.ttf") format('truetype'), url("../fonts/lato-medium/lato-medium-88383bfbcdcf3e82320014f9810df449dcdeddac988ac23732dfc70ec1b7d77d.svg#lato") format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-mediumitalic/lato-mediumitalic-c8b1bc2f29e333090960c4f907f56151a99e1727acb82f52739dae13fd62e960.eot");
+  src: local('Lato Medium Italic'), local('Lato-MediumItalic'), url("../fonts/lato-mediumitalic/lato-mediumitalic-c8b1bc2f29e333090960c4f907f56151a99e1727acb82f52739dae13fd62e960-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-mediumitalic/lato-mediumitalic-8f447edcd2d39ee7af8aa0b06d04a8fd2e27dbff93b625c0e6e9f3d8b04e9a39.woff2") format('woff2'), url("../fonts/lato-mediumitalic/lato-mediumitalic-4242fdcecc77250d348cb9d247df5ef3fd7c18bd5ed5a7fb1f9c24150c8a7500.woff") format('woff'), url("../fonts/lato-mediumitalic/lato-mediumitalic-525c8ca6df88d1a3207eabfb0cdb590918c1228d0969482e1ad0e1b35d58c349.ttf") format('truetype'), url("../fonts/lato-mediumitalic/lato-mediumitalic-5b6e2a34b68e9a2a4b3dc827be88e25c74d92e41cd236e44f5c2136855703e0d.svg#lato") format('svg');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-regular/lato-regular-a799adc3b95a04b1fbf6966306dbbfd1aad62f09a92c1f81cdf3aadc09b1cba4.eot");
+  src: local('Lato Regular'), local('Lato-Regular'), url("../fonts/lato-regular/lato-regular-a799adc3b95a04b1fbf6966306dbbfd1aad62f09a92c1f81cdf3aadc09b1cba4-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-regular/lato-regular-dc3da5f3b2066ffd80e16409739c3f46b854159b3da3c51add3f1575e9871ee6.woff2") format('woff2'), url("../fonts/lato-regular/lato-regular-bac8fd7529ad14199431bf9b56c388af416c02c1680cfa398cfb9cedcdcd3eef.woff") format('woff'), url("../fonts/lato-regular/lato-regular-4d1b04750516461935cc4380bd441308d5eae5f286e039a05993a7ab64cfdef3.ttf") format('truetype'), url("../fonts/lato-regular/lato-regular-ce4692a8bacdb88a0718e13301e09789374fb33db26ca651f90e224fbadf8864.svg#lato") format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-italic/lato-italic-585c35317d366f81c9573d219134c6d8f59e3e44a898ac07117fbfa8fe6a162f.eot");
+  src: local('Lato Italic'), local('Lato-Italic'), url("../fonts/lato-italic/lato-italic-585c35317d366f81c9573d219134c6d8f59e3e44a898ac07117fbfa8fe6a162f-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-italic/lato-italic-e37ec1819c1ab85df6e2069a90d2d686ce211cf1d83e70a1ff2c3eed66b679da.woff2") format('woff2'), url("../fonts/lato-italic/lato-italic-fdccaa222969116965e47e9caee632698eba2e10263b4ece35e0c35ef5ef7013.woff") format('woff'), url("../fonts/lato-italic/lato-italic-09c7fca6b6ec95d8caf5a3cd86bb625f4a943dca54d0d1bd9cf4ee4296d3b434.ttf") format('truetype'), url("../fonts/lato-italic/lato-italic-99c728c57c59c376c1fa76bdfcf214c88327d12f7049d579ed5df8d7acf996f9.svg#lato") format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-light/lato-light-341d4f87acab07b8c1dc0ff3f8e632ad47a8b47a8cedf8869f3a1fbb92c4ac8c.eot");
+  src: local('Lato Light'), local('Lato-Light'), url("../fonts/lato-light/lato-light-341d4f87acab07b8c1dc0ff3f8e632ad47a8b47a8cedf8869f3a1fbb92c4ac8c-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-light/lato-light-4c8fca932790d59f62df83d77cf1c4ec3de1b9a372f61e81a1746b62fba36ed7.woff2") format('woff2'), url("../fonts/lato-light/lato-light-2db698035576dcb0ba8a5c8c70d53b553b92882c9b1f5a9483618b98aa3a9fb1.woff") format('woff'), url("../fonts/lato-light/lato-light-7efd0b09b9f1934d99449269dbb4ec5b8ca917b18fb18cfd0852c48a05d32cff.ttf") format('truetype'), url("../fonts/lato-light/lato-light-4d552c3704d63389f5da8f4e8ce48606662d9ff9a4add6984f367d086df547a9.svg#lato") format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-lightitalic/lato-lightitalic-93c2296ffa5d58f3bcaf1594b706e710225319868992232dd27ab6369a737e8a.eot");
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url("../fonts/lato-lightitalic/lato-lightitalic-93c2296ffa5d58f3bcaf1594b706e710225319868992232dd27ab6369a737e8a-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-lightitalic/lato-lightitalic-d9fc1c1da023580642e39b9ef87c2cfbcc1d6508919306274fee3403dc0dc159.woff2") format('woff2'), url("../fonts/lato-lightitalic/lato-lightitalic-e33518d1874f4cb4a004d52f1ef9f17b766422213249a225990cc229c938d86d.ttf") format('truetype'), url("../fonts/lato-lightitalic/lato-lightitalic-2423373fcad3126d629d73bde440a05be0af07b8e703b06cf754aafb92121861.svg#lato") format('svg');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-thin/lato-thin-46f175a71453d2fd550b24ba66af3cc1becb8856410ab5622636c928906a2ff3.eot");
+  src: local('Lato Thin'), local('Lato-Thin'), url("../fonts/lato-thin/lato-thin-46f175a71453d2fd550b24ba66af3cc1becb8856410ab5622636c928906a2ff3-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-thin/lato-thin-3805c2094ccefe9effe129d67fe26d14c950af5564696099c6e02e7ef3e1c127.woff2") format('woff2'), url("../fonts/lato-thin/lato-thin-d1a9b702aab8df85f75db13a4d5d5b70949eb8211f16ceda058efbd6c47bf681.woff") format('woff'), url("../fonts/lato-thin/lato-thin-cf486941963fd625a34b4502f3eaa305856fc2441193a5f8c7aa86ede26153f1.ttf") format('truetype'), url("../fonts/lato-thin/lato-thin-8f2ab9beeb37a5ac9123b8ae8a532f49bd86a3e6232bae9c7e45666bce8ef632.svg#lato") format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-thinitalic/lato-thinitalic-af02b66354503a6630b3e5451c2412bca5ea2993d333960498ad4eab3b8f0e0e.eot");
+  src: local('Lato Thin Italic'), local('Lato-ThinItalic'), url("../fonts/lato-thinitalic/lato-thinitalic-af02b66354503a6630b3e5451c2412bca5ea2993d333960498ad4eab3b8f0e0e-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-thinitalic/lato-thinitalic-4d6857db5ccf5ae8493c776a05700f28dd77ba206bceb0d5dc1b2c0ad1b85e40.woff2") format('woff2'), url("../fonts/lato-thinitalic/lato-thinitalic-b9d520845392f53b55a10c8fe53bb548efeb81163d130677e834457afcbe3c9c.woff") format('woff'), url("../fonts/lato-thinitalic/lato-thinitalic-5c8b705d5ef0fe26552ee5224c2cf1150a48697c7b5799b52ac3c3d0e7a49cbc.ttf") format('truetype'), url("../fonts/lato-thinitalic/lato-thinitalic-bdc13425b84ab24615200757794160da2a214a9b35716f1153c778b011b58535.svg#lato") format('svg');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-hairline/lato-hairline-95224844ba1ca3d5ad5ceb3769905f6c8fcd3f50d5e950ecf6a58551eee55c61.eot");
+  src: local('Lato Hairline'), local('Lato-Hairline'), url("../fonts/lato-hairline/lato-hairline-95224844ba1ca3d5ad5ceb3769905f6c8fcd3f50d5e950ecf6a58551eee55c61-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-hairline/lato-hairline-8cae7ee6d8b1c9b4931074bc6db6d4d91c4cf58b09a6fd01ea1e3111a23bde6f.woff2") format('woff2'), url("../fonts/lato-hairline/lato-hairline-8cd6e1c4ff74bd2a6a487cd6010a01d15550fab64e1301e0db7ba7cd475502c1.woff") format('woff'), url("../fonts/lato-hairline/lato-hairline-0383396e9c2fa6a01ddd23a6bbe2c2e080c949c4870e7a2efa0aa1df65ce2d3f.ttf") format('truetype'), url("../fonts/lato-hairline/lato-hairline-04e4ac380098f2d2f2861f03b0758dff9a649219cd2042bba8cabe23b476dd83.svg#lato") format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/lato-hairlineitalic/lato-hairlineitalic-02e8289425a81cc1f780d549b9dda6f0ad1bc1ad6a9752ee860a33324a1e3a73.eot");
+  src: local('Lato Hairline Italic'), local('Lato-HairlineItalic'), url("../fonts/lato-hairlineitalic/lato-hairlineitalic-02e8289425a81cc1f780d549b9dda6f0ad1bc1ad6a9752ee860a33324a1e3a73-.eot#iefix") format('embedded-opentype'), url("../fonts/lato-hairlineitalic/lato-hairlineitalic-b7d7d0e1816bc776d99eda748bc01312005fd497e3f5b91573cc291ef5ddb2ea.woff2") format('woff2'), url("../fonts/lato-hairlineitalic/lato-hairlineitalic-13b8e2ec7c8bdb58c6b23559e9b361367d80167d2e630f413bc4d381aff98f1f.woff") format('woff'), url("../fonts/lato-hairlineitalic/lato-hairlineitalic-531ef4d2da6e541d10fb2ec2b75c5136cfee31965fcf1184b70ada55c88e82e4.ttf") format('truetype'), url("../fonts/lato-hairlineitalic/lato-hairlineitalic-f0095859702ef7e490a6682bda0a1b7c148afc7c31c067d951d7b7f6aaef1c07.svg#lato") format('svg');
+  font-weight: 100;
+  font-style: italic;
+}
+.appstore {
+  text-align: center;
+  margin: 50px 0 0 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.appstore p, .appstore h1 {
+  color: #000;
+}
+.appstore p {
+  padding: 10px 0;
+}
+.appstore figure {
+  display: inline-block;
+  width: 180px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+.appstore figure:hover + span {
+  bottom: -36px;
+  opacity: 1;
+}
+.appstore .hover14 figure {
+  position: relative;
+}
+.appstore .hover14 figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.appstore .hover14 figure:hover::before {
+  -webkit-animation: shine 1.25s;
+  animation: shine 1.25s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+.box {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+}
+.box.is-contrast {
+  background-color: #FAFAFA;
+}
+.box.is-cover {
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: white;
+}
+.box-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.is-main .box-container {
+  max-width: 880px;
+}
+.box.is-wide .box-container {
+  max-width: 1000px;
+}
+.box.is-cover .box-container {
+  max-width: 750px;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font: 300 17px "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #404040;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.slick-dots {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 8px;
+}
+.slick-dots li button {
+  width: 12px;
+  line-height: 10px;
+  padding: 0;
+  border: 1px solid #979797;
+  border-radius: 50%;
+  background: none;
+  color: transparent;
+}
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li.slick-active button {
+  background: #4A90E2;
+  border-color: #4A90E2;
+}
+.item-question {
+  font-weight: normal;
+  margin: 50px 0;
+}
+.item-question:before {
+  content: 'Q';
+  position: absolute;
+  margin-top: -9px;
+  margin-left: -40px;
+  font-weight: 300;
+  font-size: 30px;
+  color: #FF8383;
+}
+.item-answer {
+  margin-bottom: 60px;
+}
+.item-answer:before {
+  content: 'A';
+  position: absolute;
+  margin-top: -5px;
+  margin-left: -38px;
+  font-size: 30px;
+  color: #99CF5E;
+}
+.header {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid #CBCBCB;
+  background: rgba(255, 255, 255, 0.95);
+}
+body.is-main .header {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+body.is-main .header.is-visible {
+  opacity: 1;
+}
+.header-placeholder {
+  height: 52px;
+}
+.header-container {
+  max-width: 900px;
+  min-height: 50px;
+  margin: 0 auto;
+}
+.header-menu {
+  float: right;
+  font-size: 16px;
+  margin-top: 17px;
+}
+.header-menu span {
+  margin-left: 43px;
+  font-weight: 400;
+}
+.header-menu span a {
+  font-weight: 300;
+}
+.header-logo {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 30px;
+}
+.jony-button.green {
+  color: white;
+  border-color: #63B009;
+  background-color: #80D029;
+}
+.inline-link {
+  color: #C148F6;
+  margin: 0px -6px;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.inline-link:hover {
+  background-color: #C9DDF7;
+}
+.inline-utf-icon {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.inline-location {
+  font-family: monospace;
+  background: #FFFBCB;
+  margin: -4px 2px;
+  padding: 4px;
+}
+.inline-key {
+  display: inline-block;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  min-width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #F3F2F2;
+  border-radius: 5px;
+  border-bottom: 2px solid #E3E2E2;
+  color: #585858;
+}
+.inline-key.is-letter {
+  font-size: 18px;
+  vertical-align: top;
+}
+.inline-mouse {
+  font-size: 15px;
+  font-weight: normal;
+  color: #555555;
+}
+.item-title {
+  display: block;
+  font-size: 48px;
+  margin: 50px 0;
+  text-align: center;
+}
+.item-subtitle {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 50px 0;
+}
+.item-text {
+  margin: 50px 0;
+  line-height: 1.8em;
+}
+.item-sentence {
+  margin: 40px 0;
+  text-align: center;
+  line-height: 1.8em;
+}
+.item-sentence.is-short {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.item-list {
+  margin: 50px 0;
+  margin-left: -40px;
+  line-height: 1.8em;
+}
+.item-list li {
+  margin: 30px 0;
+}
+.item-columns > * {
+  display: inline-block;
+  margin-left: -0.28em;
+  vertical-align: top;
+}
+.item-columns > :first-child {
+  margin-left: 0;
+}
+.item-columns.is-two > * {
+  width: 50%;
+}
+.item-columns.is-three > * {
+  width: 33.3%;
+}
+.item-columns.is-four > * {
+  width: 25%;
+}
+.item-columns.is-center {
+  text-align: center;
+}
+.item-columns.is-right {
+  text-align: right;
+}
+.item-columns > .is-center {
+  text-align: center;
+}
+.item-columns > .is-right {
+  text-align: right;
+}
+.item-slogan {
+  font-size: 22px;
+  margin: 50px 0;
+  text-align: center;
+}
+.item-app-icon {
+  display: block;
+  margin: 50px auto;
+}
+.item-app-icon.bottom {
+  display: block;
+  margin: 0 auto;
+}
+.jony-buttons-container {
+  margin-left: auto;
+  margin-right: auto;
+	margin-bottom: 40px;
+	width: 448px;
+}
+.full-size-image {
+	width: 100%;
+}
+.jony-button {
+  display: inline-block;
+  width: 180px;
+  height: 48px;
+  margin: 20px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: normal;
+  text-align: left;
+  padding: 4px 12px;
+}
+.jony-button .icon {
+  float: left;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+.jony-button .title {
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.jony-button .subtitle {
+  display: block;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.jony-button.outline.white {
+  border-color: #FFF;
+  color: #FFF;
+}
+.jony-button.blue {
+  color: white;
+  background-color: #C33DF9;
+  border-color: #A93BFA;
+}
+.jony-button.outline.blue {
+  background: transparent !important;
+  color: #4A90E2;
+  border-color: #4A90E2;
+}
+.item-quote {
+  text-align: center;
+  margin: 20px 0;
+}
+.item-quote-text {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-style: italic;
+  font-size: 35px;
+  margin: 25px 0;
+  color: #6c6c6c;
+}
+.item-quote-image {
+  display: block;
+  margin: 25px auto;
+}
+.item-perk {
+  padding: 6px 0;
+}
+.item-perk-title {
+  font-size: 20px;
+  font-weight: normal;
+}
+.item-perk.is-stars .item-perk-title {
+  color: #F5A623;
+}
+.item-perk.is-rate .item-perk-title {
+  color: #6CA131;
+}
+.item-perk.is-product-hunt .item-perk-title {
+  color: #D85637;
+}
+.item-perk-subtitle {
+  padding-top: 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: .5;
+}
+.item-navigation {
+	margin: auto;
+	width: 440px;
+}
+.item-navigation-item {
+	display: inline-block;
+  margin: 8px 12px;
+}
+.item-tweet {
+  margin: 30px 8px;
+}
+.item-feature {
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+.item-feature-title {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 10px 0;
+}
+.item-feature-text {
+  line-height: 1.8em;
+}
+.item-manual-mode {
+  width: 620px;
+	margin-left: 280px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-top: 30px;
+}
+.item-manual-mode + .item-columns {
+  margin-top: -620px;
+	margin-bottom: 20px;
+}
+@media (min-width: 0px) and (max-width: 960px) {
+	.item-columns.is-three > * {
+		width: 100%;
+		display: hidden;
+		visibility: hidden;
+	}
+	.item-manual-mode {
+		margin-top: -20px;
+		margin-left: 10%;
+		width: 80%;
+		height: auto;
+	}
+	.item-manual-mode + .item-columns {
+	  margin-top: -600px;
+	}
+}
+.item-screen-image {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.item-screenshot {
+  position: relative;
+  padding-bottom: 35%;
+  background: url("../images/search.jpg") repeat-x center center;
+  background-size: cover;
+}
+.item-caption {
+  max-width: 710px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.item-caption-icon {
+  float: left;
+  margin-top: 10px;
+}
+.item-caption-content {
+  margin-left: 72px;
+}
+.item-caption-title {
+  margin-bottom: 8px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.item-product {
+  max-width: 500px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.item-product-icon {
+	width: 128px;
+	height: 128px;
+}
+.item-product-name {
+  font-weight: normal;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.item-product-price {
+  position: relative;
+  display: inline-block;
+  left: -7px;
+  top: -30px;
+  width: 47px;
+  margin-right: -56px;
+  padding: 0 4px;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #7ED321;
+  font-size: 14px;
+}
+.item-product-text {
+  margin-bottom: 30px;
+  min-height: 46px;
+}
+.item-carousel-tweet iframe {
+  width: 320px !important;
+}
+.item-modal {
+  display: none;
+}
+.item-shortcut-legend-item {
+  display: inline-block;
+  width: 150px;
+  margin: 10px 0;
+  margin-right: 65px;
+  text-align: right;
+}
+.item-shortcut {
+  padding: 15px 0;
+  border-bottom: 1px dashed #EEEEEE;
+}
+.item-shortcut-combination {
+  float: right;
+  margin-top: -7px;
+}
+.fancybox-skin {
+  background: #FAFAFA;
+}
+@font-face {
+    font-family: 'ElegantIcons';
+    src: url('../fonts/elegant-icons/ElegantIcons.eot');
+    src: url('../fonts/elegant-icons/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/elegant-icons/ElegantIcons.ttf') format('truetype'),
+    url('../fonts/elegant-icons/ElegantIcons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+			font-family: 'ElegantIcons';
+    }
+}
+[data-icon]:before {
+    font-family: 'ElegantIcons';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon_book, .icon_document, .icon_mail {
+    font-family: 'ElegantIcons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon_book:before {
+    content: "\e086";
+}
+.icon_document:before {
+    content: "\e058";
+}
+.icon_mail:before {
+    content: "\e076";
+}

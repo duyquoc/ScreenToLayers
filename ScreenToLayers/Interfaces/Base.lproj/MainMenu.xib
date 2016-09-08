@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" userLabel="Controller" customClass="AppController">
+            <connections>
+                <outlet property="statusMenu" destination="DDi-Lo-15a" id="VVL-eS-Lh7"/>
+            </connections>
+        </customObject>
+        <menu id="DDi-Lo-15a">
+            <items>
+                <menuItem title="Grab Screenshot" keyEquivalent="6" id="HlE-Ii-2Qs">
+                    <connections>
+                        <action selector="grabScreenshotWithDelay:" target="Voe-Tx-rLC" id="y9c-3V-twD"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Grab Screenshot Now" keyEquivalent="5" id="f6y-hV-biV">
+                    <connections>
+                        <action selector="grabScreenshot:" target="Voe-Tx-rLC" id="gwn-2o-5FA"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Open Outputs Folder" id="O0g-iw-eU3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openOutputsFolder:" target="Voe-Tx-rLC" id="kYt-de-Bxi"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="gzm-yB-zey"/>
+                <menuItem title="Windows List..." keyEquivalent="l" id="Uba-Pi-oo1">
+                    <connections>
+                        <action selector="showWindowsList:" target="Voe-Tx-rLC" id="r72-ru-OhK"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="guW-gs-Ztl"/>
+                <menuItem title="Preferences..." keyEquivalent="," id="BQd-JD-Vc5">
+                    <connections>
+                        <action selector="showPreferences:" target="Voe-Tx-rLC" id="csp-Mm-z6C"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Presentation" id="c6i-rF-QIN">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showPresentation:" target="Voe-Tx-rLC" id="0sh-YP-R4V"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Rate / Review" id="hDf-lO-mfp">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openAppStorePage:" target="Voe-Tx-rLC" id="xnV-NG-dey"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="XwX-mJ-kpb"/>
+                <menuItem title="Quit" keyEquivalent="q" id="f2I-5M-g6h">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="YZ6-2y-xTg"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="135.5" y="182.5"/>
+        </menu>
+    </objects>
+</document>
