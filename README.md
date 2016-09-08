@@ -16,7 +16,7 @@ The simplest way to get the latest release of **ScreenToLayers** is to download 
 
 ## Compilation
 
-The application was compiled and tested with Xcode 7 on El capitan. The project requires macOS 10.8 and used ARC and Cocoa.
+The application was compiled and tested with Xcode 7 on Mac Sierra. The project requires macOS 10.10 and used ARC and Cocoa.
 
 To compile, you only have to open `ScreenToLayers.xcodeproj` and run.
 
