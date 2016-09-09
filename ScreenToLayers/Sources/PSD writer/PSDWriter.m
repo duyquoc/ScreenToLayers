@@ -65,7 +65,7 @@
         screenRegion.size.height = imageRegion.size.height = imageRegion.size.height - imageRegion.origin.y;
     }
     
-    [l setImageData: CGImageGetData(image, imageRegion)];
+    [l setImageData: CGImageGetDataForRegion(image, imageRegion)];
     [l setOpacity: opacity];
     [l setRect: screenRegion];
     [l setName: name];
@@ -105,7 +105,7 @@
     if (flattenedData == nil) {
         if (flattenedContext) {
             CGImageRef i = CGBitmapContextCreateImage(flattenedContext);
-            flattenedData = CGImageGetData(i, CGRectMake(0, 0, documentSize.width, documentSize.height));
+            flattenedData = CGImageGetDataForRegion(i, CGRectMake(0, 0, documentSize.width, documentSize.height));
             CGImageRelease(i);
         }
     }
@@ -435,7 +435,6 @@
 	NSMutableData *scanlines = [NSMutableData data];
 	
 	int imageRowBytes = documentSize.width * 4;
-	
 	for (int channel = 0; channel < layerChannelCount; channel++) {
         @autoreleasepool {
             for (int row = 0; row < documentSize.height; row++) {
@@ -445,7 +444,7 @@
                 [scanlines appendData:packed];
             }
         }
-	}
+    }
 	
 	// chop off the image data from the original file
 	[result appendData:byteCounts];
@@ -457,7 +456,14 @@
 @end
 
 
-NSData *CGImageGetData(CGImageRef image, CGRect region)
+NSData *CGImageGetData(CGImageRef image) {
+    CGRect region = CGRectZero;
+    region.size.width = CGImageGetWidth(image);
+    region.size.height = CGImageGetHeight(image);
+    return CGImageGetDataForRegion(image, region);
+}
+
+NSData *CGImageGetDataForRegion(CGImageRef image, CGRect region)
 {
 	// Create the bitmap context
 	CGContextRef	context = NULL;

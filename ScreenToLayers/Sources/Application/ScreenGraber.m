@@ -187,9 +187,14 @@ void WindowListApplierFunction(const void *inputDictionary, void *context)
     [self updateWindowList];
     PSDWriter *writer = [[PSDWriter alloc] initWithDocumentSize:frame.size];
     
+    CGImageRef imageRef = [self newScreenshot];
+    writer.flattenedData = CGImageGetData(imageRef);
+    CGImageRelease(imageRef);
+    
+    
     for (NSInteger i = self.windowList.count - 1; i >= 0; i--) {
         NSString *name = [self nameOfWindowAtIndex:i];
-        CGImageRef imageRef = [self newScreenshotForWindowIndex:i];
+        imageRef = [self newScreenshotForWindowIndex:i];
         [writer addLayerWithCGImage:imageRef andName:name andOpacity:1.0 andOffset:CGPointZero];
         CGImageRelease(imageRef);
     }

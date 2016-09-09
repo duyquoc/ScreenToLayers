@@ -94,4 +94,5 @@ in the layers array to conserve memory as it writes the PSD data.
 @end
 
 /** A convenience function for getting RGBA NSData from a CGImageRef. */
-NSData *CGImageGetData(CGImageRef image, CGRect region);
+NSData *CGImageGetData(CGImageRef image);
+NSData *CGImageGetDataForRegion(CGImageRef image, CGRect region);
