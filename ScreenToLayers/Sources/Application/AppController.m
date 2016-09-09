@@ -24,8 +24,9 @@
 @property (strong) NSSound *flashSound;
 @property (strong) NSSound *timerSound;
 @property (assign) NSInteger timerCount;
-@property (strong) NSImage *defaultBarImage;
-@property (strong) NSImage *flashBarImage;
+@property (strong) NSImage *defaultImage;
+@property (strong) NSImage *progressImage;
+@property (assign) CGFloat progressDegrees;
 
 @end
 
@@ -46,8 +47,8 @@
         self.timerSound = [NSSound soundNamed:@"Tink"];
         self.timerSound.volume = 0.3;
         
-        self.defaultBarImage = [NSImage imageNamed:@"ToolbarTemplate"];
-        self.flashBarImage = [NSImage imageNamed:@"ToolbarFlashTemplate"];
+        self.defaultImage = [NSImage imageNamed:@"ButtonTemplate"];
+        [self updateProgressDegrees:nil];
     }
     return self;
 }
@@ -112,7 +113,7 @@ static void _registerGrabHotKey(GrabHotKeyHandler handler, int ansi) {
 - (void)setupStatusItem {
     NSStatusBar *sb = [NSStatusBar systemStatusBar];
     self.statusItem = [sb statusItemWithLength:26];
-    self.statusItem.image = [NSImage imageNamed:@"ToolbarTemplate"];
+    self.statusItem.image = self.defaultImage;
     self.statusItem.menu = self.statusMenu;
     self.statusItem.highlightMode = YES;
 }
@@ -122,13 +123,13 @@ static void _registerGrabHotKey(GrabHotKeyHandler handler, int ansi) {
     self.statusItem.title = [NSString stringWithFormat:@"%ld", self.timerCount];
 }
 
-- (void)updateBarWithFlash {
-    self.statusItem.image = [NSImage imageNamed:@"ToolbarFlashTemplate"];
+- (void)updateBarWithProgress {
+    self.statusItem.image = self.progressImage;
     self.statusItem.title = nil;
 }
 
 - (void)restoreBarWithImage {
-    self.statusItem.image = [NSImage imageNamed:@"ToolbarTemplate"];
+    self.statusItem.image = self.defaultImage;
     self.statusItem.title = nil;
 }
 
@@ -173,25 +174,31 @@ static void _registerGrabHotKey(GrabHotKeyHandler handler, int ansi) {
     }
 }
 
-#pragma mark Actions
+#pragma mark Timers
 
-- (IBAction)grabScreenshot:(id)sender {
-    if (self.timerCount != -1) {
-        return;
-    }
+- (void)updateProgressDegrees:(NSTimer *)timer {
+    CGFloat scale = [[NSScreen mainScreen] backingScaleFactor];
+    NSRect rect = NSMakeRect(0.0,
+                             0.0,
+                             self.defaultImage.size.width * scale,
+                             self.defaultImage.size.height * scale);
+    NSPoint center = NSMakePoint(rect.size.width / 2.0 ,
+                                 rect.size.height / 2.0);
     
-    [self updateBarWithFlash];
-    if ([Preferences shouldPlayFlashSound]) {
-        [self.flashSound play];
-    }
+    self.progressImage = [[NSImage alloc] initWithSize:rect.size];
+    [self.progressImage lockFocus];
+    [[NSColor blackColor] setStroke];
+    NSBezierPath *path = [NSBezierPath bezierPath];
+    [path appendBezierPathWithArcWithCenter:center
+                                     radius:6.5
+                                 startAngle:self.progressDegrees
+                                   endAngle:self.progressDegrees + 270.0];
+    [path setLineWidth:2.0];
+    [path stroke];
+    [self.progressImage unlockFocus];
     
-    int queueId = DISPATCH_QUEUE_PRIORITY_BACKGROUND;
-    dispatch_async(dispatch_get_global_queue(queueId, 0), ^{
-        [self saveScreenToFile];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self restoreBarWithImage];
-        });
-    });
+    self.progressDegrees += -10.0;
+    [self updateBarWithProgress];
 }
 
 - (void)updateScreenshotTimer:(NSTimer *)timer {
@@ -207,6 +214,32 @@ static void _registerGrabHotKey(GrabHotKeyHandler handler, int ansi) {
     self.timerCount = -1;
     [timer invalidate];
     [self grabScreenshot: nil];
+}
+
+#pragma mark Actions
+
+- (IBAction)grabScreenshot:(id)sender {
+    if (self.timerCount != -1) {
+        return;
+    }
+    
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.04
+                                                      target:self
+                                                    selector:@selector(updateProgressDegrees:)
+                                                    userInfo:nil repeats:YES];
+    
+    if ([Preferences shouldPlayFlashSound]) {
+        [self.flashSound play];
+    }
+    
+    int queueId = DISPATCH_QUEUE_PRIORITY_BACKGROUND;
+    dispatch_async(dispatch_get_global_queue(queueId, 0), ^{
+        [self saveScreenToFile];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [timer invalidate];
+            [self restoreBarWithImage];
+        });
+    });
 }
 
 - (IBAction)grabScreenshotWithDelay:(id)sender {
