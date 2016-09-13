@@ -69,43 +69,42 @@
 
 #pragma mark Hotkeys
 
-typedef OSStatus (*GrabHotKeyHandler)(EventHandlerCallRef h,EventRef e, void *d);
-
-static OSStatus _grabNowHotKeyHandler(EventHandlerCallRef h,EventRef e, void *d) {
-    [NSApp sendAction:@selector(grabScreenshot:) to:nil from:nil];
-    return noErr;
-}
-
-static OSStatus _grabDelayHotKeyHandler(EventHandlerCallRef h,EventRef e, void *d) {
-    [NSApp sendAction:@selector(grabScreenshotWithDelay:) to:nil from:nil];
-    return noErr;
-}
-
-static void _registerGrabHotKey(GrabHotKeyHandler handler, int ansi) {
-    EventTypeSpec eventType;
-    eventType.eventClass = kEventClassKeyboard;
-    eventType.eventKind = kEventHotKeyPressed;
-    InstallApplicationEventHandler(handler,
-                                   1,
-                                   &eventType,
-                                   NULL,
-                                   NULL);
+static OSStatus _hotKeyEventHandler(EventHandlerCallRef h, EventRef event, void *p) {
+    EventHotKeyID hotKeyID;
+    OSStatus err = GetEventParameter(event,
+                                     kEventParamDirectObject,
+                                     typeEventHotKeyID,
+                                     nil,
+                                     sizeof(EventHotKeyID),
+                                     nil,
+                                     &hotKeyID);
+    if (err)
+        return err;
     
-    EventHotKeyRef gMyHotKeyRef;
-    EventHotKeyID gMyHotKeyID;
-    gMyHotKeyID.signature = 'rml1';
-    gMyHotKeyID.id = 1;
-    RegisterEventHotKey(ansi,
-                        cmdKey+shiftKey,
-                        gMyHotKeyID,
-                        GetApplicationEventTarget(),
-                        0,
-                        &gMyHotKeyRef);
+    switch (hotKeyID.id) {
+        case 1: [NSApp sendAction:@selector(grabScreenshot:) to:nil from:nil];          break;
+        case 2: [NSApp sendAction:@selector(grabScreenshotWithDelay:) to:nil from:nil]; break;
+        default: break;
+    }
+    return YES;
 }
 
 - (void)registerHotKeys {
-    _registerGrabHotKey(_grabNowHotKeyHandler, kVK_ANSI_5);
-    _registerGrabHotKey(_grabDelayHotKeyHandler, kVK_ANSI_6);
+    EventHotKeyRef hotKeyRef;
+    EventHotKeyID hotKeyID;
+    EventTypeSpec eventType = {kEventClassKeyboard, kEventHotKeyPressed};
+    
+    InstallApplicationEventHandler(&_hotKeyEventHandler, 1, &eventType, NULL, NULL);
+    EventTargetRef target = GetApplicationEventTarget();
+    
+    hotKeyID.signature='htk1';
+    hotKeyID.id = 1;
+    RegisterEventHotKey(kVK_ANSI_5, cmdKey+shiftKey, hotKeyID, target, 0, &hotKeyRef);
+    
+    hotKeyID.signature='htk2';
+    hotKeyID.id = 2;
+    RegisterEventHotKey(kVK_ANSI_6, cmdKey+shiftKey, hotKeyID, target, 0, &hotKeyRef);
+    
 }
 
 #pragma mark Status item
